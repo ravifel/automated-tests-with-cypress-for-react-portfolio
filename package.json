@@ -1,0 +1,32 @@
+{
+  "name": "automatedtestsraviwebsite-cypress",
+  "version": "1.0.0",
+  "description": "Automated end-to-end tests for Ravi Silva’s Portfolio Website using Cypress (JavaScript). Mirrors test flows from the Selenium WebDriver version.",
+  "main": "index.js",
+  "author": "Ravi Silva",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:edge": "cypress run --browser edge",
+    "clean": "rm -rf cypress/screenshots cypress/videos .cypress-cache",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "automation",
+    "qa",
+    "portfolio",
+    "end-to-end",
+    "testing"
+  ],
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

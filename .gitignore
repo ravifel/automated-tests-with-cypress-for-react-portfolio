@@ -1,0 +1,71 @@
+# =======================================
+# Node.js
+# =======================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Optional: keep package-lock.json if you prefer deterministic builds
+# !package-lock.json
+
+# =======================================
+# Cypress Artifacts
+# =======================================
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/.cy-cache/
+.cypress-cache/
+CypressCache/
+.cy/
+
+# Cypress binary cache (optional)
+~/.cache/Cypress/
+
+# =======================================
+# OS / Editor Files
+# =======================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# =======================================
+# Environment / Secrets
+# =======================================
+.env
+.env.local
+.env.*.local
+
+# =======================================
+# Logs
+# =======================================
+*.log
+logs/
+logs/*.log
+
+# =======================================
+# Coverage Tools (if using later)
+# =======================================
+coverage/
+.nyc_output/
+
+# =======================================
+# Misc / Temp
+# =======================================
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
