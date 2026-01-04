@@ -85,11 +85,12 @@ Flow inspired by corporate environments:
 master  
   ↑  
 develop  
-  ├── feature/*  
-  ├── fix/*  
-  ├── docs/*  
-  └── chore/*  
-
+  ├── feature/*  -> New functionality
+  ├── test/*  -> Creating or improving tests
+  ├── fix/*  -> Bug fix
+  ├── docs/*  -> Documentation
+  ├── chore/*  -> Configuration, CI, dependencies
+  └── refactor/*  -> Refactoring without changing behavior
 ---
 
 ### Flow Rules
