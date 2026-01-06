@@ -8,6 +8,7 @@ export class TestimonialsPage {
   sortSelect = '#testimonials-sort-filter-select';
   resultsPerPageSelect = '.pagination-select__control';
 
+  testimonialCardsList = '#testimonials-list .testimonial-card';
   testimonialCardsPage1 = '#testimonial-card-1-0';
   testimonialCardsPage2 = '#testimonial-card-2-0';
   seeMoreLinks = '#testimonial-card-1-0-see-more-btn';
@@ -58,16 +59,16 @@ export class TestimonialsPage {
     cy.get(this.backBtn).click();
   }
 
-  getVisibleCards() {
-    return cy.get(this.testimonialCards);
-  }
-
   getVisibleCards(numberPage) {
     if (numberPage == 1) {
       return cy.get(this.testimonialCardsPage1);
     } else if (numberPage == 2) {
       return cy.get(this.testimonialCardsPage2);
     }
+  }
+
+  getAllVisibleCards() {
+    return cy.get(this.testimonialCardsList);
   }
 
   getLinkedInHref() {

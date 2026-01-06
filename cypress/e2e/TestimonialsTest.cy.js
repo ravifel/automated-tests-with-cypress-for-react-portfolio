@@ -32,12 +32,12 @@ describe('Testimonials Page - End to End Tests', () => {
 
   it('Should_Change_To_6_Results_Per_Page', () => {
     testimonialsPage.selectResultsPerPage(6);
-    testimonialsPage.getVisibleCards(1).should('have.length.at.most', 6);
+    testimonialsPage.getAllVisibleCards().should('have.length', 6);
   });
 
     it('Should_Change_To_12_Results_Per_Page', () => {
     testimonialsPage.selectResultsPerPage(12);
-    testimonialsPage.getVisibleCards(1).should('have.length.at.most', 12);
+    testimonialsPage.getAllVisibleCards().should('have.length', 12);
   });
 
   it('Should_Navigate_To_Next_And_Back_Page', () => {
