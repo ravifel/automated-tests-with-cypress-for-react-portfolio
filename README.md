@@ -1,28 +1,42 @@
 # Automated Tests with Cypress – Ravi Portfolio
 
-This repository contains automated **End-to-End (E2E)** tests developed with **Cypress** to validate the behavior of Ravi Silva’s web portfolio.
+This repository contains **End-to-End (E2E)** automated tests built with **Cypress** to validate the behavior, stability, and user flows of Ravi Silva’s Portfolio Website, hosted on GitHub Pages.
 
-The goal of this project is to demonstrate best practices in test automation, code organization, usage of Page Objects, Continuous Integration (CI), and a professional Pull Request workflow, following standards commonly used in corporate environments.
+The project was designed to simulate real-world QA practices, following patterns, workflows, and standards commonly used in professional software teams.
+
+---
+
+## 🎯 Project Objectives
+
+- Validate critical user journeys across the portfolio
+- Demonstrate solid QA automation architecture
+- Apply Page Object Model (POM) in practice
+- Use resilient selectors suitable for real production environments
+- Implement CI pipelines for automated validation
+- Simulate a corporate Git workflow (branches, PRs, CI gates)
 
 ---
 
 ## 🧪 Technologies Used
 
-- **JavaScript**
-- **Cypress** (E2E Testing)
-- **Node.js**
-- **GitHub Actions** (CI)
-- **GitHub Pages** (tested application)
+- **JavaScript** (ES6+)
+- **Cypress** (E2E Testing Framework)
+- **Node.js**(v18+)
+- **GitHub Actions** (CI - Continuous Integration)
+- **GitHub Pages** (Target application under test)
 
 ---
 
 ## 📂 Project Structure
 
-![alt text](./public/images/image.png)
+📌 Key principle:
+- Tests focus on behavior, Page Objects encapsulate structure and actions.
+
+![alt text](./public/images/project-structure.png)
 
 ---
 
-## 🧱 Architecture Pattern
+## 🧱 Architecture – Page Object Model (POM)
 
 The project follows the **Page Object Model (POM)** pattern:
 
@@ -30,10 +44,39 @@ The project follows the **Page Object Model (POM)** pattern:
 - **Tests (e2e)**: focus only on behavior and validation  
 - **Clear separation** between test logic and page structure  
 
-This ensures:
-- Better maintainability  
-- More readable tests  
-- Lower coupling  
+Benefits:
+- High maintainability
+- Reduced duplication
+- Easier refactoring
+- Clear separation of concerns
+
+---
+
+## 🧪 Test Coverage Overview
+
+🏠 Home Page:
+- Page load & title validation
+- Navbar navigation (Home, Repositories, Testimonials)
+- Language switch and <html lang> validation
+- Theme toggle (UI state comparison)
+- Contact modal behavior
+- HTML5 form validation
+- External links domain validation (LinkedIn, GitHub, WhatsApp)
+
+📦 Repositories Page:
+- Page rendering validation
+- Accordion interaction
+- Repository cards rendering
+- Validation of GitHub links
+
+💬 Testimonials Page:
+- Page access & rendering
+- Testimonials card listing
+- Modal open/close behavior
+- Sorting (Oldest / Most recent)
+- Pagination navigation
+- Results per page validation (6 and 12 items)
+- External LinkedIn profile validation
 
 ---
 
@@ -61,17 +104,18 @@ npm run cy:run:edge
 ---
 
 ### 🤖 Continuous Integration (CI)
-This project uses GitHub Actions to run tests automatically.
+This project uses GitHub Actions to automatically run Cypress tests.
 
-- The pipeline is triggered when:
-There is a push to develop, master, or main  
-A Pull Request is opened targeting develop, master, or main  
-Manual execution via workflow_dispatch  
+Pipeline behavior:
+(Triggered on)
+- Push to main, master, or develop
+- Pull Requests targeting those branches
+- Manual execution (workflow_dispatch)
 
-- What CI does:
-Installs dependencies  
-Runs Cypress tests in headless mode  
-Blocks merges if tests fail  
+Steps:
+- Install dependencies
+- Run Cypress tests in headless mode
+- Fail the pipeline if any test fails
 
 ---
 
@@ -91,6 +135,14 @@ develop
   ├── docs/*  -> Documentation
   ├── chore/*  -> Configuration, CI, dependencies
   └── refactor/*  -> Refactoring without changing behavior
+
+
+Rules:
+- No direct commits to develop or master
+- All changes via Pull Requests
+- CI must pass before merge
+- Branches removed after merge
+
 ---
 
 ### Flow Rules
@@ -106,9 +158,10 @@ Pull Request title
 Format:  
 <type>(scope): short description  
 
-ci(workflow): run Cypress E2E on pull requests  
-fix(home): adjust contact form validation  
-docs(readme): add project documentation  
+Examples:
+- ci(workflow): run Cypress E2E on pull requests  
+- fix(home): adjust contact form validation  
+- docs(readme): add project documentation  
 
 ---
 
@@ -135,16 +188,6 @@ Versions are generated from the master branch, following Semantic Versioning:
 - v1.0.1 – bug fixes  
 
 Tags are created only after full validation in the develop branch.
-
----
-
-### 🎯 Project Goal
-This project focuses on:
-- QA best practices  
-- Realistic E2E automation  
-- Code organization and standardization  
-- Continuous Integration applied in practice  
-- Simulation of a professional development workflow  
 
 ---
 

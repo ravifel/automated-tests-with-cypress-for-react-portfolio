@@ -9,20 +9,17 @@ class HomePage {
   navbarTestimonials = '#link-testimonials';
   themeToggleBtn = '#toggle-theme-btn';
   languageSelect = '#language-select';
-
   btnCoverLetter = '#btn-cover-letter-en';
   btnResumeEn = '#btn-resume-en';
   btnContactEmail = '#btn-contact-email';
   btnContactWhatsapp = '#btn-contact-whatsapp';
   btnContactLinkedin = '#btn-contact-linkedin';
   btnContactGitHub = '#btn-contact-github';
-
   inputName = '#input-name';
   inputEmail = '#input-email';
   inputMessage = '#input-message';
   btnSend = '#btn-contact-send';
   btnCloseModal = "button[aria-label='Close']";
-
   modalVisible = 'div.modal.show';
 
   // ===== Actions / Workflows =====
