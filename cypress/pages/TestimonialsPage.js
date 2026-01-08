@@ -4,14 +4,14 @@ export class TestimonialsPage {
   pageTitle = '#testimonials-title';
   linkedinBtn = '#btn-linkedin-testimonials';
   sortSelect = '#testimonials-sort-filter-select';
-  resultsPerPageSelect = '.pagination-select__control';
+  resultsPerPageSelect = '#results-per-page-select';
   testimonialCardsList = '#testimonials-list .testimonial-card';
   testimonialCardsPage1 = '#testimonial-card-1-0';
   testimonialCardsPage2 = '#testimonial-card-2-0';
   seeMoreLinks = '#testimonial-card-1-0-see-more-btn';
-  modal = '.modal-content';
+  modal = '#modal-content-selector';
   modalSeeMoreBtn = '#testimonial-card-1-0-see-more-btn';
-  modalCloseBtn = '.btn-close';
+  modalCloseBtn = '#modal-close-btn';
   nextBtn = '#testimonials-pagination-next';
   backBtn = '#testimonials-pagination-prev';
 
