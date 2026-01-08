@@ -19,8 +19,8 @@ class HomePage {
   inputEmail = '#input-email';
   inputMessage = '#input-message';
   btnSend = '#btn-contact-send';
-  btnCloseModal = "button[aria-label='Close']";
-  modalVisible = 'div.modal.show';
+  btnCloseModal = "#modal-close-btn";
+  modalVisible = '#modal-content-selector';
 
   // ===== Actions / Workflows =====
 
